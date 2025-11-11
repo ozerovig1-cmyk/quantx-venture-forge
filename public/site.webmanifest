@@ -1,0 +1,18 @@
+{
+  "name": "QuantXlr8 - Venture-Client Accelerator",
+  "short_name": "QX8",
+  "description": "From pilot to paid deployment in 90 days. Enterprise-validated innovation accelerator.",
+  "icons": [
+    {
+      "src": "/brand/qx8-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#0B1020",
+  "background_color": "#E9EDF2",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

@@ -1,12 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Startups from "@/components/Startups";
+import Corporates from "@/components/Corporates";
+import Investors from "@/components/Investors";
+import ProgramSnapshot from "@/components/ProgramSnapshot";
+import CaseStudies from "@/components/CaseStudies";
+import Timeline from "@/components/Timeline";
+import FAQ from "@/components/FAQ";
+import ApplicationForms from "@/components/ApplicationForms";
+import MegaCTA from "@/components/MegaCTA";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "QuantXlr8 | Venture-Client Accelerator - From Pilot to Paid Deployment";
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main id="main-content">
+        <Hero />
+        <Startups />
+        <Corporates />
+        <Investors />
+        <ProgramSnapshot />
+        <CaseStudies />
+        <Timeline />
+        <FAQ />
+        <ApplicationForms />
+        <MegaCTA />
+      </main>
+      <Footer />
     </div>
   );
 };

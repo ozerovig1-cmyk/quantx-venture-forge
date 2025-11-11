@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="#E9EDF2"/>
+  
+  <!-- Q -->
+  <path d="M14 20C14 18.3431 15.3431 17 17 17H19C20.6569 17 22 18.3431 22 20V26C22 27.6569 20.6569 29 19 29H17C15.3431 29 14 27.6569 14 26V20Z" stroke="#0B1020" stroke-width="2" fill="none"/>
+  <path d="M20 26L23 29" stroke="#0B1020" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- X with diagonal cut (motion effect) -->
+  <g>
+    <path d="M28 20L40 38" stroke="#2D6BFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M40 20L28 38" stroke="#00C2B8" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arrow accent -->
+    <path d="M40 38L44 38L40 34" fill="#2D6BFF"/>
+  </g>
+  
+  <!-- 8 -->
+  <g transform="translate(42, 18)">
+    <ellipse cx="4" cy="3" rx="3" ry="2.5" stroke="#0B1020" stroke-width="1.5" fill="none"/>
+    <ellipse cx="4" cy="8" rx="3" ry="2.5" stroke="#0B1020" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>
