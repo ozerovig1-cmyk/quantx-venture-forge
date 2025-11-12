@@ -3,7 +3,8 @@ import ValueCard from "@/components/ValueCard";
 import { Filter, TrendingUp, Zap, ArrowRight } from "lucide-react";
 const Corporates = () => {
   const scrollToForm = () => {
-    const element = document.getElementById("corporate-form");
+    window.location.hash = "apply-corporate";
+    const element = document.getElementById("apply");
     if (element) {
       element.scrollIntoView({
         behavior: "smooth"

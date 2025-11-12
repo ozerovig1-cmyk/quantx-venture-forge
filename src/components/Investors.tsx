@@ -3,7 +3,8 @@ import ValueCard from "@/components/ValueCard";
 import { Telescope, TrendingUp, Award, ArrowRight } from "lucide-react";
 const Investors = () => {
   const scrollToForm = () => {
-    const element = document.getElementById("investor-form");
+    window.location.hash = "apply-investor";
+    const element = document.getElementById("apply");
     if (element) {
       element.scrollIntoView({
         behavior: "smooth"
