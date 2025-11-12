@@ -29,8 +29,8 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqs.map((faq, index) => <Accordion key={index} type="single" collapsible>
+          <div className="md:columns-2 gap-6 space-y-6">
+            {faqs.map((faq, index) => <Accordion key={index} type="single" collapsible className="break-inside-avoid mb-6">
                 <AccordionItem value={`item-${index}`} className="bg-card border border-border rounded-2xl px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                   <AccordionTrigger className="text-left hover:no-underline py-6">
                     <span className="font-semibold text-lg text-foreground">{faq.question}</span>
