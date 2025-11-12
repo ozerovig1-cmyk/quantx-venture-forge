@@ -19,7 +19,7 @@ const Header = () => {
       
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-3">
-          <img src="/brand/logo.jpg" alt="QuantXlr8 logo" className="h-12" />
+          <img src="/brand/logo.svg" alt="QuantXlr8 logo" className="h-12" />
         </div>
 
         {/* Desktop Navigation */}

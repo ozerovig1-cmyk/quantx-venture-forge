@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
-              <img src="/brand/logo.jpg" alt="QuantXlr8 logo" className="h-12" />
+              <img src="/brand/logo.svg" alt="QuantXlr8 logo" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
               From pilot to paid deployment in 90 days. We match startups with enterprise BUs for real pilots that convert into revenue contracts.
