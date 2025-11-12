@@ -33,7 +33,7 @@ const Startups = () => {
             <p className="text-sm text-muted-foreground mt-2">— Series A Founder, Enterprise AI</p>
           </div>
 
-          <Button size="lg" onClick={scrollToForm} className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-base">
+          <Button size="lg" onClick={scrollToForm} className="text-accent-foreground font-semibold text-base bg-slate-700 hover:bg-slate-600">
             Apply Now
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
