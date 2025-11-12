@@ -25,9 +25,7 @@ const Hero = () => {
             <Button size="lg" onClick={() => scrollToSection("corporate-form")} variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
               Partner as Corporate
             </Button>
-            <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
-              Invest/LP With Us
-            </Button>
+            <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">Invest with us</Button>
           </div>
 
           <div className="border-t border-white/20 pt-8">
