@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { VoiceInputWrapper } from "@/components/VoiceInputWrapper";
 
 const startupSchema = z.object({
   company: z.string().min(1, "Company name is required").max(100),
@@ -44,7 +45,7 @@ const investorSchema = z.object({
 export const StartupForm = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
     resolver: zodResolver(startupSchema),
   });
 
@@ -83,26 +84,34 @@ export const StartupForm = () => {
 
       <div>
         <Label htmlFor="icp">Ideal Customer Profile *</Label>
-        <Textarea id="icp" {...register("icp")} rows={3} aria-invalid={!!errors.icp} />
+        <VoiceInputWrapper onTranscript={(text) => setValue("icp", text)}>
+          <Textarea id="icp" {...register("icp")} rows={3} aria-invalid={!!errors.icp} className="pr-12" />
+        </VoiceInputWrapper>
         {errors.icp && <p className="text-sm text-destructive mt-1">{String(errors.icp.message)}</p>}
       </div>
 
       <div>
         <Label htmlFor="problem">Problem You Solve *</Label>
-        <Textarea id="problem" {...register("problem")} rows={4} aria-invalid={!!errors.problem} />
+        <VoiceInputWrapper onTranscript={(text) => setValue("problem", text)}>
+          <Textarea id="problem" {...register("problem")} rows={4} aria-invalid={!!errors.problem} className="pr-12" />
+        </VoiceInputWrapper>
         {errors.problem && <p className="text-sm text-destructive mt-1">{String(errors.problem.message)}</p>}
       </div>
 
       <div>
         <Label htmlFor="traction">Current Traction *</Label>
-        <Textarea id="traction" {...register("traction")} rows={3} aria-invalid={!!errors.traction} />
+        <VoiceInputWrapper onTranscript={(text) => setValue("traction", text)}>
+          <Textarea id="traction" {...register("traction")} rows={3} aria-invalid={!!errors.traction} className="pr-12" />
+        </VoiceInputWrapper>
         {errors.traction && <p className="text-sm text-destructive mt-1">{String(errors.traction.message)}</p>}
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="team">Team Background *</Label>
-          <Textarea id="team" {...register("team")} rows={3} aria-invalid={!!errors.team} />
+          <VoiceInputWrapper onTranscript={(text) => setValue("team", text)}>
+            <Textarea id="team" {...register("team")} rows={3} aria-invalid={!!errors.team} className="pr-12" />
+          </VoiceInputWrapper>
           {errors.team && <p className="text-sm text-destructive mt-1">{String(errors.team.message)}</p>}
         </div>
         <div>
@@ -146,7 +155,7 @@ export const StartupForm = () => {
 export const CorporateForm = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
     resolver: zodResolver(corporateSchema),
   });
 
@@ -185,13 +194,17 @@ export const CorporateForm = () => {
 
       <div>
         <Label htmlFor="domains">Domains of Interest *</Label>
-        <Textarea id="domains" {...register("domains")} rows={3} aria-invalid={!!errors.domains} />
+        <VoiceInputWrapper onTranscript={(text) => setValue("domains", text)}>
+          <Textarea id="domains" {...register("domains")} rows={3} aria-invalid={!!errors.domains} className="pr-12" />
+        </VoiceInputWrapper>
         {errors.domains && <p className="text-sm text-destructive mt-1">{String(errors.domains.message)}</p>}
       </div>
 
       <div>
         <Label htmlFor="problems">Problem Statements (Optional)</Label>
-        <Textarea id="problems" {...register("problems")} rows={4} />
+        <VoiceInputWrapper onTranscript={(text) => setValue("problems", text)}>
+          <Textarea id="problems" {...register("problems")} rows={4} className="pr-12" />
+        </VoiceInputWrapper>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
