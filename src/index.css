@@ -9,42 +9,42 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* QuantXlr8 Brand Colors */
-    --background: 220 25% 96%; /* Neutral Gray #E9EDF2 */
-    --foreground: 220 90% 5%; /* Onyx #0A0A0A */
+    --background: 0 0% 96%; /* #f6f6f6 */
+    --foreground: 228 21% 25%; /* #32374c */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 90% 5%;
+    --card-foreground: 228 21% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 90% 5%;
+    --popover-foreground: 228 21% 25%;
 
-    --primary: 224 80% 24%; /* Deep Navy #0B1020 */
+    --primary: 228 20% 35%; /* #464d6b */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 96%; /* Neutral */
-    --secondary-foreground: 224 80% 24%;
+    --secondary: 0 0% 86%; /* #dcdcdc */
+    --secondary-foreground: 228 21% 25%;
 
-    --muted: 220 20% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 0 0% 86%;
+    --muted-foreground: 228 22% 45%;
 
-    --accent: 217 100% 50%; /* Electric Blue #2D6BFF */
+    --accent: 228 22% 45%; /* #5a638a */
     --accent-foreground: 0 0% 100%;
 
-    --teal: 177 100% 38%; /* Teal Accent #00C2B8 */
+    --teal: 177 100% 38%;
     --teal-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 217 100% 50%;
+    --border: 0 0% 86%;
+    --input: 0 0% 86%;
+    --ring: 228 22% 45%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(224 80% 24%) 0%, hsl(217 100% 50%) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(217 100% 50%) 0%, hsl(177 100% 38%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(228 21% 25%) 0%, hsl(228 22% 45%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(228 22% 45%) 0%, hsl(228 20% 35%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 25% 10% / 0.05);
@@ -58,25 +58,25 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 224 80% 8%;
-    --foreground: 220 25% 96%;
+    --background: 228 21% 25%;
+    --foreground: 0 0% 96%;
 
-    --card: 224 70% 12%;
-    --card-foreground: 220 25% 96%;
+    --card: 228 21% 20%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 224 70% 12%;
-    --popover-foreground: 220 25% 96%;
+    --popover: 228 21% 20%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 217 100% 50%;
+    --primary: 228 22% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 224 60% 16%;
-    --secondary-foreground: 220 25% 96%;
+    --secondary: 228 20% 35%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 224 60% 16%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 228 20% 35%;
+    --muted-foreground: 0 0% 86%;
 
-    --accent: 177 100% 38%;
+    --accent: 228 22% 45%;
     --accent-foreground: 0 0% 100%;
 
     --teal: 177 100% 38%;
@@ -85,9 +85,9 @@ All colors MUST be HSL.
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 224 50% 20%;
-    --input: 224 50% 20%;
-    --ring: 217 100% 50%;
+    --border: 228 20% 35%;
+    --input: 228 20% 35%;
+    --ring: 228 22% 45%;
   }
 }
 

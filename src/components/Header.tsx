@@ -18,10 +18,8 @@ const Header = () => {
       </a>
       
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-2">
-          <img src="/brand/qx8-mark.svg" alt="QuantXlr8 logo" className="h-10 w-10" />
-          <span className="text-xl font-bold text-primary">QuantXlr8 Ventures
-        </span>
+        <div className="flex items-center gap-3">
+          <img src="/brand/logo.jpg" alt="QuantXlr8 logo" className="h-12" />
         </div>
 
         {/* Desktop Navigation */}
