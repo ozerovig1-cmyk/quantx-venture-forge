@@ -4,9 +4,9 @@
   "description": "From pilot to paid deployment in 90 days. Enterprise-validated innovation accelerator.",
   "icons": [
     {
-      "src": "/brand/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/brand/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
