@@ -1,17 +1,16 @@
 import { Button } from "@/components/ui/button";
 import ValueCard from "@/components/ValueCard";
 import { Filter, TrendingUp, Zap, ArrowRight } from "lucide-react";
-
 const Corporates = () => {
   const scrollToForm = () => {
     const element = document.getElementById("corporate-form");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="corporates" className="py-12 md:py-16 bg-muted/30">
+  return <section id="corporates" className="py-12 md:py-16 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -22,22 +21,9 @@ const Corporates = () => {
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <ValueCard
-              icon={Filter}
-              title="Curated Pipeline"
-              description="Pre-vetted startups aligned to your specific use-cases and business unit requirements. No noise, just signal."
-            />
-            <ValueCard
-              icon={TrendingUp}
-              title="Trend Intelligence"
-              description="Comprehensive insights across your vertical to inform roadmaps and strategic partner choices."
-              accentColor="teal"
-            />
-            <ValueCard
-              icon={Zap}
-              title="Venture-Clienting"
-              description="Buy/try before equity. Faster discovery to deployment cycle with clear ROI gates and measurable outcomes."
-            />
+            <ValueCard icon={Filter} title="Curated Pipeline" description="Pre-vetted startups aligned to your specific use-cases and business unit requirements. No noise, just signal." />
+            <ValueCard icon={TrendingUp} title="Trend Intelligence" description="Comprehensive insights across your vertical to inform roadmaps and strategic partner choices." accentColor="teal" />
+            <ValueCard icon={Zap} title="Venture-Clienting" description="Buy/try before equity. Faster discovery to deployment cycle with clear ROI gates and measurable outcomes." />
           </div>
 
           <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 mb-8">
@@ -47,18 +33,12 @@ const Corporates = () => {
             <p className="text-sm text-muted-foreground mt-2">— Innovation Director, Fortune 500 Industrial</p>
           </div>
 
-          <Button 
-            size="lg" 
-            onClick={scrollToForm}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-          >
+          <Button size="lg" onClick={scrollToForm} className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base">
             Become a Corporate Partner
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Corporates;
