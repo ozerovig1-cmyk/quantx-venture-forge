@@ -145,7 +145,7 @@ export const StartupForm = () => {
         </div>
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
         {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Submit Application"}
       </Button>
     </form>
@@ -292,7 +292,7 @@ export const InvestorForm = () => {
         {errors.email && <p className="text-sm text-destructive mt-1">{String(errors.email.message)}</p>}
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
         {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Request Investor Deck"}
       </Button>
     </form>
