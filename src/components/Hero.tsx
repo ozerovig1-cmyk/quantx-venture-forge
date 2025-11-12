@@ -9,6 +9,16 @@ const Hero = () => {
       });
     }
   };
+
+  const scrollToApply = (tabValue: string) => {
+    window.location.hash = `apply-${tabValue}`;
+    const element = document.getElementById("apply");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  };
   return <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent py-12 md:py-20">
       <div className="absolute inset-0 bg-[url('/images/hero-collaboration.jpg')] bg-cover bg-center opacity-10" />
       
@@ -28,7 +38,18 @@ const Hero = () => {
             <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="border-white hover:bg-white font-semibold text-slate-700 text-base">Invest with Us</Button>
           </div>
 
-          
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-slate-700 text-base">
+              Apply as Startup
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="border-white hover:bg-white text-slate-700 font-semibold text-base">
+              Partner as Corporate
+            </Button>
+            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="border-white hover:bg-white font-semibold text-slate-700 text-base">
+              Invest with Us
+            </Button>
+          </div>
         </div>
       </div>
     </section>;
