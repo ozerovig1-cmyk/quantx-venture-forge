@@ -29,16 +29,18 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
 
-          <Accordion type="single" collapsible className="space-y-6">
-            {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-card border border-border rounded-2xl px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  <span className="font-semibold text-lg text-foreground">{faq.question}</span>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>)}
-          </Accordion>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {faqs.map((faq, index) => <Accordion key={index} type="single" collapsible>
+                <AccordionItem value={`item-${index}`} className="bg-card border border-border rounded-2xl px-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-lg text-foreground">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>)}
+          </div>
         </div>
       </div>
     </section>;
