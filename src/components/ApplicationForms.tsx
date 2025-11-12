@@ -40,18 +40,18 @@ const ApplicationForms = () => {
               <TabsTrigger value="investor">Investor</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="startup" className="bg-card rounded-2xl p-8 shadow-card border border-border">
-              <h3 className="text-2xl font-bold mb-6">Apply as a Startup</h3>
+            <TabsContent value="startup" className="bg-card rounded-2xl p-6 shadow-card border border-border">
+              <h3 className="text-2xl font-bold mb-4">Apply as a Startup</h3>
               <StartupForm />
             </TabsContent>
 
-            <TabsContent value="corporate" className="bg-card rounded-2xl p-8 shadow-card border border-border">
-              <h3 className="text-2xl font-bold mb-6">Partner as a Corporate</h3>
+            <TabsContent value="corporate" className="bg-card rounded-2xl p-6 shadow-card border border-border">
+              <h3 className="text-2xl font-bold mb-4">Partner as a Corporate</h3>
               <CorporateForm />
             </TabsContent>
 
-            <TabsContent value="investor" className="bg-card rounded-2xl p-8 shadow-card border border-border">
-              <h3 className="text-2xl font-bold mb-6">Request Investor Deck</h3>
+            <TabsContent value="investor" className="bg-card rounded-2xl p-6 shadow-card border border-border">
+              <h3 className="text-2xl font-bold mb-4">Request Investor Deck</h3>
               <InvestorForm />
             </TabsContent>
           </Tabs>
