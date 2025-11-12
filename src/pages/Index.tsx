@@ -23,7 +23,7 @@ const Index = () => {
         <Investors />
         <ProgramSnapshot />
         <CaseStudies />
-        <FAQ className="mx-0 my-0" />
+        <FAQ />
         <ApplicationForms />
         <MegaCTA />
       </main>

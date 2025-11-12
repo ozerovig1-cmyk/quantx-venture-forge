@@ -10,7 +10,7 @@ const ProgramSnapshot = () => {
   ];
 
   return (
-    <section id="program" className="py-20 md:py-32 bg-muted/30">
+    <section id="program" className="py-12 md:py-16 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">

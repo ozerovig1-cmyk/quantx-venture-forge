@@ -9,7 +9,7 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent py-20 md:py-32">
+  return <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary to-accent py-12 md:py-20">
       <div className="absolute inset-0 bg-[url('/images/hero-collaboration.jpg')] bg-cover bg-center opacity-10" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
