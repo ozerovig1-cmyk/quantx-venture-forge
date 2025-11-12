@@ -6,12 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/brand/qx8-mark.svg" alt="QuantXlr8 logo" className="h-12 w-12" />
-              <div>
-                <div className="text-xl font-bold text-primary">QuantXlr8</div>
-                <div className="text-sm text-muted-foreground">Venture-Client Accelerator</div>
-              </div>
+            <div className="mb-4">
+              <img src="/brand/logo.jpg" alt="QuantXlr8 logo" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
               From pilot to paid deployment in 90 days. We match startups with enterprise BUs for real pilots that convert into revenue contracts.
