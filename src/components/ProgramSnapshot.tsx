@@ -13,12 +13,9 @@ const ProgramSnapshot = () => {
     <section id="program" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
             Program Snapshot
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
-            <strong>How it works:</strong> Discover → Shortlist → Design POC → Run Pilot → Convert to Paid Deployment. This is venture-clienting in action: the corporate becomes an early customer of the startup's product/tech.
-          </p>
 
           <div className="grid md:grid-cols-5 gap-6 mb-12">
             {steps.map((step, index) => {
@@ -32,9 +29,6 @@ const ProgramSnapshot = () => {
                     <h3 className="font-bold mb-2">{step.title}</h3>
                     <p className="text-sm text-muted-foreground">{step.description}</p>
                   </div>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-border -translate-x-1/2" aria-hidden="true" />
-                  )}
                 </div>
               );
             })}

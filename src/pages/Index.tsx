@@ -6,7 +6,6 @@ import Corporates from "@/components/Corporates";
 import Investors from "@/components/Investors";
 import ProgramSnapshot from "@/components/ProgramSnapshot";
 import CaseStudies from "@/components/CaseStudies";
-import Timeline from "@/components/Timeline";
 import FAQ from "@/components/FAQ";
 import ApplicationForms from "@/components/ApplicationForms";
 import MegaCTA from "@/components/MegaCTA";
@@ -27,7 +26,6 @@ const Index = () => {
         <Investors />
         <ProgramSnapshot />
         <CaseStudies />
-        <Timeline />
         <FAQ />
         <ApplicationForms />
         <MegaCTA />
