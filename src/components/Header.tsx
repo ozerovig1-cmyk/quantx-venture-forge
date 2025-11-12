@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
       setMobileMenuOpen(false);
     }
   };
-
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+  return <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus-ring">
         Skip to main content
       </a>
@@ -22,7 +20,8 @@ const Header = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <img src="/brand/qx8-mark.svg" alt="QuantXlr8 logo" className="h-10 w-10" />
-          <span className="text-xl font-bold text-primary">QX8</span>
+          <span className="text-xl font-bold text-primary">QuantXlr8 Ventures
+        </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -51,19 +50,13 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden focus-ring p-2"
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileMenuOpen}
-        >
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden focus-ring p-2" aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <nav className="md:hidden border-t border-border bg-card" aria-label="Mobile navigation">
+      {mobileMenuOpen && <nav className="md:hidden border-t border-border bg-card" aria-label="Mobile navigation">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <button onClick={() => scrollToSection("startups")} className="text-left text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring py-2">
               Startups
@@ -87,10 +80,7 @@ const Header = () => {
               Apply
             </Button>
           </div>
-        </nav>
-      )}
-    </header>
-  );
+        </nav>}
+    </header>;
 };
-
 export default Header;
