@@ -10,14 +10,11 @@ import FAQ from "@/components/FAQ";
 import ApplicationForms from "@/components/ApplicationForms";
 import MegaCTA from "@/components/MegaCTA";
 import Footer from "@/components/Footer";
-
 const Index = () => {
   useEffect(() => {
     document.title = "QuantXlr8 | Venture-Client Accelerator - From Pilot to Paid Deployment";
   }, []);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       <main id="main-content">
         <Hero />
@@ -26,13 +23,11 @@ const Index = () => {
         <Investors />
         <ProgramSnapshot />
         <CaseStudies />
-        <FAQ />
+        <FAQ className="mx-0 my-0" />
         <ApplicationForms />
         <MegaCTA />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
