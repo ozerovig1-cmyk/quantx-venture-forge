@@ -9,7 +9,6 @@ const Hero = () => {
       });
     }
   };
-
   const scrollToApply = (tabValue: string) => {
     window.location.hash = `apply-${tabValue}`;
     const element = document.getElementById("apply");
@@ -27,16 +26,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">From MVP to ScaleUp</h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl leading-relaxed">We're a thematic Corporate Venture Accelerator: we strategiclaly select aligned startups with MVP to large enterprise BUs to run real-life corporate pilots that convert into revenue generating Scaleups — not a typical Spray and Pray approach</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button size="lg" onClick={() => scrollToSection("startup-form")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-slate-700 text-base">
-              Apply as Startup
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button size="lg" onClick={() => scrollToSection("corporate-form")} variant="outline" className="border-white hover:bg-white text-slate-700 font-semibold text-base">
-              Partner as Corporate
-            </Button>
-            <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="border-white hover:bg-white font-semibold text-slate-700 text-base">Invest with Us</Button>
-          </div>
+          
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-slate-700 text-base">
