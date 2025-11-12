@@ -24,7 +24,7 @@ const Investors = () => {
             <ValueCard icon={Award} title="Portfolio Discipline" description="Focus on B2B traction and enterprise monetization. Every startup is prepared for enterprise sales cycles." />
           </div>
 
-          <Button size="lg" onClick={scrollToForm} className="font-semibold text-base text-slate-50 bg-slate-700 hover:bg-slate-600">
+          <Button size="lg" onClick={scrollToForm} className="fbg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base ">
             Request Investor Deck
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
