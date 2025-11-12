@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const MegaCTA = () => {
   const scrollToApply = (tabValue: string) => {
     // Update URL hash to trigger tab change
     window.location.hash = `apply-${tabValue}`;
-    
+
     // Scroll to the application section
     const element = document.getElementById("apply");
     if (element) {
@@ -27,28 +26,14 @@ const MegaCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              onClick={() => scrollToApply("startup")} 
-              className="bg-white text-primary hover:bg-white/90 font-semibold shadow-xl text-lg px-8 w-full sm:w-auto"
-            >
+            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white text-primary hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto mx-px px-0">
               Apply as Startup
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
-              size="lg" 
-              onClick={() => scrollToApply("corporate")} 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 text-lg w-full sm:w-auto"
-            >
+            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto text-slate-600 mx-[20px] px-px">
               Partner as Corporate
             </Button>
-            <Button 
-              size="lg" 
-              onClick={() => scrollToApply("investor")} 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 text-lg w-full sm:w-auto"
-            >
+            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto px-px mx-[2px] text-slate-600">
               Invest with Us
             </Button>
           </div>
