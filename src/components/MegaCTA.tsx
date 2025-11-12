@@ -26,14 +26,14 @@ const MegaCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white text-primary hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto mx-px px-0">
+            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white text-primary hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto px-0 mx-px">
               Apply as Startup
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto text-slate-600 mx-[20px] px-px">
+            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto text-slate-600 px-px mx-px">
               Partner as Corporate
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto px-px mx-[2px] text-slate-600">
+            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-lg w-full sm:w-auto px-px text-slate-600 mx-px">
               Invest with Us
             </Button>
           </div>
