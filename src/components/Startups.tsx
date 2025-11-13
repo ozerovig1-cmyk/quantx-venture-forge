@@ -17,7 +17,7 @@ const Startups = () => {
             Qualified Customers, not just Capital and Guidance          
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
-            Direct access to enterprise decision-makers, pilot budgets, and a path to purchase orders under a venture-client model (corporate buys/uses your tech without needing equity).
+            Direct access to enterprise decision-makers, pilot budgets, and a path to purchase orders under a venture-client model  
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
