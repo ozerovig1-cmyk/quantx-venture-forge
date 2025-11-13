@@ -27,12 +27,7 @@ const Corporates = () => {
             <ValueCard icon={Zap} title="Venture-Clienting" description="Buy/try before equity. Faster discovery to deployment cycle with clear ROI gates and measurable outcomes." />
           </div>
 
-          <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 mb-8">
-            <blockquote className="text-lg italic text-foreground">
-              "The pipeline was pre-vetted to our requirements and the pilot translated cleanly into a paid rollout."
-            </blockquote>
-            <p className="text-sm text-muted-foreground mt-2">— Innovation Director, Fortune 500 Industrial</p>
-          </div>
+          
 
           <Button size="lg" onClick={scrollToForm} className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base">
             Become a Corporate Partner

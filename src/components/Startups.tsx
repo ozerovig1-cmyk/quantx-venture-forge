@@ -26,12 +26,7 @@ const Startups = () => {
             <ValueCard icon={Shield} title="Founder-First" description="A practical, no-fluff approach to ship, learn, and win enterprise usage. Build products customers actually pay for." />
           </div>
 
-          <div className="bg-accent/10 border border-accent/20 rounded-2xl p-8 mb-8">
-            <blockquote className="text-lg italic text-foreground">
-              "They didn't just mentor us — they got our pilot budget approved and helped us pass security on the first try."
-            </blockquote>
-            <p className="text-sm text-muted-foreground mt-2">— Series A Founder, Enterprise AI</p>
-          </div>
+          
 
           <Button size="lg" onClick={scrollToForm} className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-base ">
             Apply Now
