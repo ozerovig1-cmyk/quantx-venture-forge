@@ -14,7 +14,7 @@ const Startups = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Customers, not just capital
+            Qualified Customers, not just Capital and Guidance          
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl">
             Direct access to enterprise decision-makers, pilot budgets, and a path to purchase orders under a venture-client model (corporate buys/uses your tech without needing equity).
