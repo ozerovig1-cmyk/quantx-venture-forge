@@ -18,14 +18,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 231 29% 52%;
 
-    --primary: 21 29% 52%; /* #a47864 - Warm brownish tan */
+    --primary: 174 29% 52%; /* #64a498 - Teal green */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 86%; /* #dcdcdc */
-    --secondary-foreground: 21 29% 32%;
+    --secondary-foreground: 231 29% 52%;
 
     --muted: 0 0% 86%;
-    --muted-foreground: 21 29% 42%;
+    --muted-foreground: 231 29% 42%;
 
     --accent: 231 29% 52%; /* #6470a4 - Blue purple */
     --accent-foreground: 0 0% 100%;
@@ -67,13 +67,13 @@ All colors MUST be HSL.
     --popover: 21 29% 15%;
     --popover-foreground: 0 0% 96%;
 
-    --primary: 21 29% 52%;
+    --primary: 174 29% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 21 29% 32%;
+    --secondary: 231 29% 32%;
     --secondary-foreground: 0 0% 96%;
 
-    --muted: 21 29% 32%;
+    --muted: 231 29% 32%;
     --muted-foreground: 0 0% 86%;
 
     --accent: 231 29% 52%;
