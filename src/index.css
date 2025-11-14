@@ -10,13 +10,13 @@ All colors MUST be HSL.
   :root {
     /* QuantXlr8 Brand Colors - New Palette */
     --background: 0 0% 96%; /* #f6f6f6 */
-    --foreground: 21 29% 32%; /* Darker shade of #a47864 */
+    --foreground: 231 29% 52%; /* #6470a4 - Blue purple for text on light background */
 
     --card: 0 0% 100%;
-    --card-foreground: 21 29% 32%;
+    --card-foreground: 231 29% 52%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 21 29% 32%;
+    --popover-foreground: 231 29% 52%;
 
     --primary: 21 29% 52%; /* #a47864 - Warm brownish tan */
     --primary-foreground: 0 0% 100%;
