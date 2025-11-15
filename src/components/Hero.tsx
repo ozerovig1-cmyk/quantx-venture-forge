@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">From Idea to ScaleUp</h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl leading-relaxed">We're a thematic Corporate Venture Accelerator: we strategically select aligned rockstar founders to address large enterprise pain points to run real-life corporate pilots that convert into revenue generating Scaleups                                                                                                                                                                                                                                                                                                                                  </p>
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl leading-relaxed">We're a thematic Corporate Venture Accelerator: we strategically select aligned rockstar founders to address large enterprise pain points to run real-life corporate pilots that convert into revenue generating Scaleups                                                                                                                                                                                                                                                                                                                                  </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base text-accent">
