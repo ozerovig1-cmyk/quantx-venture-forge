@@ -25,25 +25,25 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <button onClick={() => scrollToSection("startups")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("startups")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             Startups
           </button>
-          <button onClick={() => scrollToSection("corporates")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("corporates")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             Corporates
           </button>
-          <button onClick={() => scrollToSection("investors")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("investors")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             Investors
           </button>
-          <button onClick={() => scrollToSection("program")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("program")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             Program
           </button>
-          <button onClick={() => scrollToSection("case-studies")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("case-studies")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             Case Studies
           </button>
-          <button onClick={() => scrollToSection("faqs")} className="text-sm font-medium text-foreground hover:text-accent transition-colors focus-ring">
+          <button onClick={() => scrollToSection("faqs")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
             FAQs
           </button>
-          <Button onClick={() => scrollToSection("apply")} className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button onClick={() => scrollToSection("apply")} className="text-accent-foreground bg-[#a47864]">
             Apply
           </Button>
         </nav>
