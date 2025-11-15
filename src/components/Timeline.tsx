@@ -10,7 +10,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section className="py-20 md:py-32 bg-gradient-to-r from-brand/20 via-accent/20 to-brand/20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-center">
@@ -31,9 +31,9 @@ const Timeline = () => {
             ))}
           </div>
 
-          <div className="bg-teal/10 border border-teal/20 rounded-xl p-6 text-center">
+          <div className="bg-gradient-to-r from-brand/20 to-accent/20 border border-brand/30 rounded-xl p-6 text-center">
             <p className="text-foreground font-medium">
-              <span className="text-teal font-bold">Rolling acceptance</span> for exceptional fits — reach out anytime
+              <span className="text-brand font-bold">Rolling acceptance</span> for exceptional fits — reach out anytime
             </p>
           </div>
         </div>

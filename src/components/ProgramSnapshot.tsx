@@ -10,7 +10,7 @@ const ProgramSnapshot = () => {
   ];
 
   return (
-    <section id="program" className="py-12 md:py-16 bg-muted/30">
+    <section id="program" className="py-12 md:py-16 bg-gradient-to-br from-accent/10 via-brand/10 to-accent/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
@@ -46,7 +46,7 @@ const ProgramSnapshot = () => {
                 "Fundraising preparation",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="bg-teal/20 text-teal rounded-full p-1 mt-0.5">
+                  <div className="bg-brand/20 text-brand rounded-full p-1 mt-0.5">
                     <ListChecks size={16} />
                   </div>
                   <span className="text-muted-foreground">{item}</span>
