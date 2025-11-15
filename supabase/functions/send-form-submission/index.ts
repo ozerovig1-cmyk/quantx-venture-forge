@@ -158,10 +158,10 @@ const handler = async (req: Request): Promise<Response> => {
         break;
     }
 
-    // Send email to Forms@QuanXlr8.com
+    // Send email to Forms@QuantXlr8.com
     const emailResponse = await resend.emails.send({
       from: "QuantXlr8 Forms <onboarding@resend.dev>",
-      to: ["Forms@QuanXlr8.com"],
+      to: ["Forms@QuantXlr8.com"],
       subject: emailSubject,
       html: emailContent,
     });
