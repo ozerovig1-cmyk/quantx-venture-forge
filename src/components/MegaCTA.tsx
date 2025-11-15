@@ -26,14 +26,14 @@ const MegaCTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-slate-700 text-lg">
+            <Button size="lg" onClick={() => scrollToApply("startup")} className="bg-white hover:bg-white/90 shadow-xl text-slate-700 text-lg font-medium">
               Apply as Startup
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="border-white hover:bg-white text-slate-700 font-semibold text-lg">
+            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="border-white hover:bg-white text-slate-700 text-lg font-medium">
               Partner as Corporate
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="border-white hover:bg-white font-semibold text-slate-700 text-lg">
+            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="border-white hover:bg-white text-slate-700 text-lg font-medium">
               Invest with Us
             </Button>
           </div>
