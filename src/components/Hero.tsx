@@ -9,7 +9,7 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-br from-brand via-brand/80 to-accent">
+  return <section className="relative overflow-hidden py-12 md:py-20 bg-gradient-to-br from-accent via-accent/80 to-brand">
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl">
