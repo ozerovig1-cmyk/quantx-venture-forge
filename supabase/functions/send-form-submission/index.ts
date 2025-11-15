@@ -23,7 +23,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { formType, data }: FormSubmission = await req.json();
 
-    console.log(`Processing ${formType} form submission:`, data);
+    console.log(`Processing ${formType} form submission`);
 
     let emailSubject = "";
     let emailContent = "";
@@ -100,7 +100,7 @@ const handler = async (req: Request): Promise<Response> => {
       html: emailContent,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email sent successfully");
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
@@ -110,7 +110,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
     });
   } catch (error: any) {
-    console.error("Error in send-form-submission function:", error);
+    console.error("Error in send-form-submission function");
     return new Response(
       JSON.stringify({ error: error.message }),
       {
