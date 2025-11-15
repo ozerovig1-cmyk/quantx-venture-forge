@@ -18,6 +18,24 @@ const CaseStudies = () => {
       outcome: "42% reduction in processing time, 18% improved approval accuracy; production rollout approved",
       next: "Integration with core banking system across all business units",
     },
+    {
+      title: "Intelligent Document Processing",
+      image: "/images/data-infrastructure.jpg",
+      problem: "Manual KYC document verification causing 5-day customer onboarding delays",
+      solution: "Computer vision + NLP for automated document extraction and verification",
+      pilot: "60-day test with 5K accounts; success = 70% automation rate",
+      outcome: "85% automation achieved, onboarding reduced to 24 hours; scaled to wealth management division",
+      next: "Regional expansion with multi-language support for 12 markets",
+    },
+    {
+      title: "Personalized Wealth Management",
+      image: "/images/hero-collaboration.jpg",
+      problem: "Low engagement with robo-advisor platform and declining AUM",
+      solution: "Generative AI financial advisor with personalized portfolio recommendations",
+      pilot: "3-month beta with 2K high-value clients; success = 25% engagement increase",
+      outcome: "38% engagement lift, $120M AUM growth; full platform integration approved",
+      next: "White-label solution for partner banks across 5 countries",
+    },
   ];
 
   return (
