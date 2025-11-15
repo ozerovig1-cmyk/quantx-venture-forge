@@ -18,13 +18,13 @@ const Header = () => {
         Skip to main content
       </a>
       
-      <div className="container mx-auto flex h-16 items-center justify-between pl-0 pr-4 md:pl-2 md:pr-6">
-        <div className="flex items-center gap-3 group">
+      <div className="container mx-auto flex h-16 items-center justify-between px-0">
+        <div className="flex items-center gap-3 group pl-0">
           <SaveableLogo />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center gap-6 pr-6" aria-label="Main navigation">
           <button onClick={() => scrollToSection("startups")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             Startups
           </button>
@@ -49,7 +49,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden focus-ring p-2" aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden focus-ring p-2 mr-4" aria-label={mobileMenuOpen ? "Close menu" : "Open menu"} aria-expanded={mobileMenuOpen}>
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
