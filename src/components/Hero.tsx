@@ -17,14 +17,14 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl leading-relaxed">We're a thematic Corporate Venture Accelerator: we strategically select aligned startups with MVP to address large enterprise pain points to run real-life corporate pilots that convert into revenue generating Scaleups </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={() => scrollToSection("startup-form")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-primary text-base">
+            <Button size="lg" onClick={() => scrollToSection("startup-form")} className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base text-[#6470a4]">
               Apply as Startup
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" onClick={() => scrollToSection("corporate-form")} variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold text-base">
+            <Button size="lg" onClick={() => scrollToSection("corporate-form")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base bg-white text-[#6470a4]">
               Partner as Corporate
             </Button>
-            <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold text-base">
+            <Button size="lg" onClick={() => scrollToSection("investor-form")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base bg-white text-[#6470a4]">
               Invest with Us
             </Button>
           </div>
