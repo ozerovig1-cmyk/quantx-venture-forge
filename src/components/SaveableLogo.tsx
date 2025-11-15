@@ -25,7 +25,7 @@ const SaveableLogo = () => {
 
   return (
     <div className="flex items-center gap-2 -ml-4">
-      <img src="/brand/logo.png" alt="QuantXlr8 logo" className="h-20 w-auto object-cover object-left scale-110" style={{ clipPath: 'inset(0 15% 0 10%)' }} />
+      <img src="/brand/logo.png" alt="QuantXlr8 logo" className="h-20 w-auto object-cover object-left scale-110" style={{ clipPath: 'inset(0 15% 0 20%)' }} />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
