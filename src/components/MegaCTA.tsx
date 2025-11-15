@@ -13,7 +13,7 @@ const MegaCTA = () => {
       });
     }
   };
-  return <section className="py-12 md:py-20 bg-gradient-to-br from-primary via-accent to-teal relative overflow-hidden">
+  return <section className="py-12 md:py-20 bg-gradient-to-br from-accent via-accent/80 to-brand relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/images/data-infrastructure.jpg')] bg-cover bg-center opacity-10" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 rounded-none">
