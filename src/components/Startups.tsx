@@ -3,7 +3,8 @@ import ValueCard from "@/components/ValueCard";
 import { Target, Shield, Brain, ArrowRight } from "lucide-react";
 const Startups = () => {
   const scrollToForm = () => {
-    const element = document.getElementById("startup-form");
+    window.location.hash = "apply-startup";
+    const element = document.getElementById("apply");
     if (element) {
       element.scrollIntoView({
         behavior: "smooth"
