@@ -24,26 +24,26 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <button onClick={() => scrollToSection("startups")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <button onClick={() => scrollToSection("startups")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             Startups
           </button>
-          <button onClick={() => scrollToSection("corporates")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
+          <button onClick={() => scrollToSection("corporates")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             Corporates
           </button>
-          <button onClick={() => scrollToSection("investors")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
+          <button onClick={() => scrollToSection("investors")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             Investors
           </button>
-          <button onClick={() => scrollToSection("program")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
+          <button onClick={() => scrollToSection("program")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             Program
           </button>
-          <button onClick={() => scrollToSection("case-studies")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold ">
+          <button onClick={() => scrollToSection("case-studies")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             Case Studies
           </button>
-          <button onClick={() => scrollToSection("faqs")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
+          <button onClick={() => scrollToSection("faqs")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold hover:opacity-80">
             FAQs
           </button>
-          <Button onClick={() => scrollToSection("apply")} className="text-accent-foreground bg-[#a47864] font-medium">
+          <Button onClick={() => scrollToSection("apply")} className="ml-2 text-accent-foreground bg-[#a47864] font-medium hover:opacity-90">
             Apply
           </Button>
         </nav>
