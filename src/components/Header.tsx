@@ -25,25 +25,25 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <button onClick={() => scrollToSection("startups")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("startups")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             Startups
           </button>
-          <button onClick={() => scrollToSection("corporates")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("corporates")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             Corporates
           </button>
-          <button onClick={() => scrollToSection("investors")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("investors")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             Investors
           </button>
-          <button onClick={() => scrollToSection("program")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("program")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             Program
           </button>
-          <button onClick={() => scrollToSection("case-studies")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("case-studies")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold ">
             Case Studies
           </button>
-          <button onClick={() => scrollToSection("faqs")} className="text-sm font-medium transition-colors focus-ring text-[#a47864]">
+          <button onClick={() => scrollToSection("faqs")} className="text-sm transition-colors focus-ring text-[#a47864] font-semibold">
             FAQs
           </button>
-          <Button onClick={() => scrollToSection("apply")} className="text-accent-foreground bg-[#a47864]">
+          <Button onClick={() => scrollToSection("apply")} className="text-accent-foreground bg-[#a47864] font-medium">
             Apply
           </Button>
         </nav>
