@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import SaveableLogo from "./SaveableLogo";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const scrollToSection = (id: string) => {
@@ -18,8 +19,8 @@ const Header = () => {
       </a>
       
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-3">
-          <img src="/brand/logo.png" alt="QuantXlr8 logo" className="h-20 w-auto" />
+        <div className="flex items-center gap-3 group">
+          <SaveableLogo />
         </div>
 
         {/* Desktop Navigation */}
