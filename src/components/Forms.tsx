@@ -10,7 +10,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { VoiceInputWrapper } from "@/components/VoiceInputWrapper";
 import { supabase } from "@/integrations/supabase/client";
-
 const startupSchema = z.object({
   company: z.string().min(1, "Company name is required").max(100),
   website: z.string().url("Must be a valid URL").max(255),
@@ -22,9 +21,8 @@ const startupSchema = z.object({
   email: z.string().email("Must be a valid email").max(255),
   linkedin: z.string().url("Must be a valid URL").max(255),
   security: z.string().max(200),
-  demo: z.string().url("Must be a valid URL").max(255).optional().or(z.literal("")),
+  demo: z.string().url("Must be a valid URL").max(255).optional().or(z.literal(""))
 });
-
 const corporateSchema = z.object({
   company: z.string().min(1, "Company name is required").max(100),
   businessUnit: z.string().min(1, "Business unit is required").max(200),
@@ -32,45 +30,60 @@ const corporateSchema = z.object({
   problems: z.string().max(1000).optional(),
   budget: z.string().min(1, "Budget guardrails are required").max(200),
   dataLevel: z.string().min(1, "Data classification level is required").max(100),
-  email: z.string().email("Must be a valid email").max(255),
+  email: z.string().email("Must be a valid email").max(255)
 });
-
 const investorSchema = z.object({
   firmType: z.string().min(1, "Firm type is required").max(100),
   checkSize: z.string().min(1, "Check size is required").max(100),
   stage: z.string().min(1, "Stage focus is required").max(200),
   geography: z.string().min(1, "Geography is required").max(100),
-  email: z.string().email("Must be a valid email").max(255),
+  email: z.string().email("Must be a valid email").max(255)
 });
-
 export const StartupForm = () => {
   const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
-    resolver: zodResolver(startupSchema),
+  const {
+    toast
+  } = useToast();
+  const {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    },
+    reset,
+    setValue
+  } = useForm({
+    resolver: zodResolver(startupSchema)
   });
-
   const onSubmit = async (data: z.infer<typeof startupSchema>) => {
     setLoading(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-submission', {
-        body: { formType: 'startup', data }
+      const {
+        error
+      } = await supabase.functions.invoke('send-form-submission', {
+        body: {
+          formType: 'startup',
+          data
+        }
       });
-
       if (error) throw error;
-      
-      toast({ title: "Application submitted!", description: "We'll be in touch soon." });
+      toast({
+        title: "Application submitted!",
+        description: "We'll be in touch soon."
+      });
       reset();
     } catch (error) {
       console.error("Error submitting startup form:", error);
-      toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
+      toast({
+        title: "Error",
+        description: "Something went wrong",
+        variant: "destructive"
+      });
     } finally {
       setLoading(false);
     }
   };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="startup-form">
+  return <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="startup-form">
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="company">Company Name *</Label>
@@ -86,7 +99,7 @@ export const StartupForm = () => {
 
       <div>
         <Label htmlFor="icp">Ideal Customer Profile *</Label>
-        <VoiceInputWrapper onTranscript={(text) => setValue("icp", text)}>
+        <VoiceInputWrapper onTranscript={text => setValue("icp", text)}>
           <Textarea id="icp" {...register("icp")} rows={3} aria-invalid={!!errors.icp} className="pr-12" />
         </VoiceInputWrapper>
         {errors.icp && <p className="text-sm text-destructive mt-1">{String(errors.icp.message)}</p>}
@@ -94,7 +107,7 @@ export const StartupForm = () => {
 
       <div>
         <Label htmlFor="problem">Problem You Solve *</Label>
-        <VoiceInputWrapper onTranscript={(text) => setValue("problem", text)}>
+        <VoiceInputWrapper onTranscript={text => setValue("problem", text)}>
           <Textarea id="problem" {...register("problem")} rows={4} aria-invalid={!!errors.problem} className="pr-12" />
         </VoiceInputWrapper>
         {errors.problem && <p className="text-sm text-destructive mt-1">{String(errors.problem.message)}</p>}
@@ -102,7 +115,7 @@ export const StartupForm = () => {
 
       <div>
         <Label htmlFor="traction">Current Traction *</Label>
-        <VoiceInputWrapper onTranscript={(text) => setValue("traction", text)}>
+        <VoiceInputWrapper onTranscript={text => setValue("traction", text)}>
           <Textarea id="traction" {...register("traction")} rows={3} aria-invalid={!!errors.traction} className="pr-12" />
         </VoiceInputWrapper>
         {errors.traction && <p className="text-sm text-destructive mt-1">{String(errors.traction.message)}</p>}
@@ -111,7 +124,7 @@ export const StartupForm = () => {
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="team">Team Background *</Label>
-          <VoiceInputWrapper onTranscript={(text) => setValue("team", text)}>
+          <VoiceInputWrapper onTranscript={text => setValue("team", text)}>
             <Textarea id="team" {...register("team")} rows={3} aria-invalid={!!errors.team} className="pr-12" />
           </VoiceInputWrapper>
           {errors.team && <p className="text-sm text-destructive mt-1">{String(errors.team.message)}</p>}
@@ -147,41 +160,56 @@ export const StartupForm = () => {
         </div>
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+      <Button type="submit" disabled={loading} className="w-full text-primary-foreground font-semibold bg-[#a47864]">
         {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Submit Application"}
       </Button>
-    </form>
-  );
+    </form>;
 };
-
 export const CorporateForm = () => {
   const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
-    resolver: zodResolver(corporateSchema),
+  const {
+    toast
+  } = useToast();
+  const {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    },
+    reset,
+    setValue
+  } = useForm({
+    resolver: zodResolver(corporateSchema)
   });
-
   const onSubmit = async (data: z.infer<typeof corporateSchema>) => {
     setLoading(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-submission', {
-        body: { formType: 'corporate', data }
+      const {
+        error
+      } = await supabase.functions.invoke('send-form-submission', {
+        body: {
+          formType: 'corporate',
+          data
+        }
       });
-
       if (error) throw error;
-      
-      toast({ title: "Partnership request submitted!", description: "We'll contact you shortly." });
+      toast({
+        title: "Partnership request submitted!",
+        description: "We'll contact you shortly."
+      });
       reset();
     } catch (error) {
       console.error("Error submitting corporate form:", error);
-      toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
+      toast({
+        title: "Error",
+        description: "Something went wrong",
+        variant: "destructive"
+      });
     } finally {
       setLoading(false);
     }
   };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="corporate-form">
+  return <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="corporate-form">
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="corp-company">Company Name *</Label>
@@ -197,7 +225,7 @@ export const CorporateForm = () => {
 
       <div>
         <Label htmlFor="domains">Domains of Interest *</Label>
-        <VoiceInputWrapper onTranscript={(text) => setValue("domains", text)}>
+        <VoiceInputWrapper onTranscript={text => setValue("domains", text)}>
           <Textarea id="domains" {...register("domains")} rows={3} aria-invalid={!!errors.domains} className="pr-12" />
         </VoiceInputWrapper>
         {errors.domains && <p className="text-sm text-destructive mt-1">{String(errors.domains.message)}</p>}
@@ -205,7 +233,7 @@ export const CorporateForm = () => {
 
       <div>
         <Label htmlFor="problems">Problem Statements (Optional)</Label>
-        <VoiceInputWrapper onTranscript={(text) => setValue("problems", text)}>
+        <VoiceInputWrapper onTranscript={text => setValue("problems", text)}>
           <Textarea id="problems" {...register("problems")} rows={4} className="pr-12" />
         </VoiceInputWrapper>
       </div>
@@ -229,41 +257,55 @@ export const CorporateForm = () => {
         {errors.email && <p className="text-sm text-destructive mt-1">{String(errors.email.message)}</p>}
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+      <Button type="submit" disabled={loading} className="w-full text-primary-foreground font-semibold bg-[#a47864]">
         {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Submit Partnership Request"}
       </Button>
-    </form>
-  );
+    </form>;
 };
-
 export const InvestorForm = () => {
   const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
-    resolver: zodResolver(investorSchema),
+  const {
+    toast
+  } = useToast();
+  const {
+    register,
+    handleSubmit,
+    formState: {
+      errors
+    },
+    reset
+  } = useForm({
+    resolver: zodResolver(investorSchema)
   });
-
   const onSubmit = async (data: z.infer<typeof investorSchema>) => {
     setLoading(true);
     try {
-      const { error } = await supabase.functions.invoke('send-form-submission', {
-        body: { formType: 'investor', data }
+      const {
+        error
+      } = await supabase.functions.invoke('send-form-submission', {
+        body: {
+          formType: 'investor',
+          data
+        }
       });
-
       if (error) throw error;
-      
-      toast({ title: "Deck request received!", description: "We'll send it over shortly." });
+      toast({
+        title: "Deck request received!",
+        description: "We'll send it over shortly."
+      });
       reset();
     } catch (error) {
       console.error("Error submitting investor form:", error);
-      toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
+      toast({
+        title: "Error",
+        description: "Something went wrong",
+        variant: "destructive"
+      });
     } finally {
       setLoading(false);
     }
   };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="investor-form">
+  return <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" id="investor-form">
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="firmType">Firm Type *</Label>
@@ -296,9 +338,8 @@ export const InvestorForm = () => {
         {errors.email && <p className="text-sm text-destructive mt-1">{String(errors.email.message)}</p>}
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+      <Button type="submit" disabled={loading} className="w-full text-primary-foreground font-semibold bg-[#a47864]">
         {loading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting...</> : "Request Investor Deck"}
       </Button>
-    </form>
-  );
+    </form>;
 };
