@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 231 29% 52%;
 
-    --primary: 174 29% 52%; /* #64a498 - Teal green */
+    --primary: 231 29% 52%; /* #6470a4 - Blue purple */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 86%; /* #dcdcdc */
@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --accent: 231 29% 52%; /* #6470a4 - Blue purple */
     --accent-foreground: 0 0% 100%;
 
-    --teal: 174 29% 52%; /* #64a498 - Teal green */
+    --teal: 231 29% 52%; /* #6470a4 - Blue purple */
     --teal-foreground: 0 0% 100%;
 
     --brand: 21 29% 52%; /* #a47864 - Warm brown brand color */
@@ -70,7 +70,7 @@ All colors MUST be HSL.
     --popover: 21 29% 15%;
     --popover-foreground: 0 0% 96%;
 
-    --primary: 174 29% 52%;
+    --primary: 231 29% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 231 29% 32%;
@@ -82,7 +82,7 @@ All colors MUST be HSL.
     --accent: 231 29% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --teal: 174 29% 52%;
+    --teal: 231 29% 52%;
     --teal-foreground: 0 0% 100%;
 
     --brand: 21 29% 52%;
