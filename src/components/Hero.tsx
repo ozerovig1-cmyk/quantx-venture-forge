@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import floralBanner from "@/assets/floral-banner-1.jpg";
+import floralAccent from "@/assets/floral-accent.jpg";
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -9,7 +11,31 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-teal py-12 md:py-20">
+  return <section className="relative overflow-hidden py-12 md:py-20">
+      {/* Gradient Background with Flowers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brand via-accent to-accent"></div>
+      
+      {/* Floral Banner Overlay */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `url(${floralBanner})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          mixBlendMode: 'multiply'
+        }}
+      ></div>
+
+      {/* Floral Accent - Bottom Right */}
+      <div 
+        className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 opacity-40"
+        style={{
+          backgroundImage: `url(${floralAccent})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'bottom right',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl">
