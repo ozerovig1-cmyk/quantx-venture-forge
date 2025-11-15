@@ -18,7 +18,7 @@ const Header = () => {
         Skip to main content
       </a>
       
-      <div className="container mx-auto flex h-16 items-center justify-between pl-2 pr-4 md:pl-4 md:pr-6">
+      <div className="container mx-auto flex h-16 items-center justify-between pl-0 pr-4 md:pl-2 md:pr-6">
         <div className="flex items-center gap-3 group">
           <SaveableLogo />
         </div>
