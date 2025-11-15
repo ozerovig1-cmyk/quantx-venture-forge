@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { VoiceInputWrapper } from "@/components/VoiceInputWrapper";
+import { supabase } from "@/integrations/supabase/client";
 
 const startupSchema = z.object({
   company: z.string().min(1, "Company name is required").max(100),
@@ -52,15 +53,16 @@ export const StartupForm = () => {
   const onSubmit = async (data: z.infer<typeof startupSchema>) => {
     setLoading(true);
     try {
-      // Mock API endpoint - logs to console and returns success
-      console.log("Startup Application Submitted:", JSON.stringify(data, null, 2));
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const { error } = await supabase.functions.invoke('send-form-submission', {
+        body: { formType: 'startup', data }
+      });
+
+      if (error) throw error;
       
       toast({ title: "Application submitted!", description: "We'll be in touch soon." });
       reset();
     } catch (error) {
+      console.error("Error submitting startup form:", error);
       toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
     } finally {
       setLoading(false);
@@ -162,15 +164,16 @@ export const CorporateForm = () => {
   const onSubmit = async (data: z.infer<typeof corporateSchema>) => {
     setLoading(true);
     try {
-      // Mock API endpoint - logs to console and returns success
-      console.log("Corporate Partnership Request Submitted:", JSON.stringify(data, null, 2));
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const { error } = await supabase.functions.invoke('send-form-submission', {
+        body: { formType: 'corporate', data }
+      });
+
+      if (error) throw error;
       
       toast({ title: "Partnership request submitted!", description: "We'll contact you shortly." });
       reset();
     } catch (error) {
+      console.error("Error submitting corporate form:", error);
       toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
     } finally {
       setLoading(false);
@@ -243,15 +246,16 @@ export const InvestorForm = () => {
   const onSubmit = async (data: z.infer<typeof investorSchema>) => {
     setLoading(true);
     try {
-      // Mock API endpoint - logs to console and returns success
-      console.log("Investor Deck Request Submitted:", JSON.stringify(data, null, 2));
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 800));
+      const { error } = await supabase.functions.invoke('send-form-submission', {
+        body: { formType: 'investor', data }
+      });
+
+      if (error) throw error;
       
       toast({ title: "Deck request received!", description: "We'll send it over shortly." });
       reset();
     } catch (error) {
+      console.error("Error submitting investor form:", error);
       toast({ title: "Error", description: "Something went wrong", variant: "destructive" });
     } finally {
       setLoading(false);
