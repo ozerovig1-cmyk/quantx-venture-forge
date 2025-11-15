@@ -10,7 +10,7 @@ const ProgramSnapshot = () => {
   ];
 
   return (
-    <section id="program" className="py-12 md:py-16 bg-gradient-to-br from-accent/10 via-brand/10 to-accent/10">
+    <section id="program" className="py-12 md:py-16 bg-gradient-to-br from-accent/10 via-brand/10 to-brand/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
