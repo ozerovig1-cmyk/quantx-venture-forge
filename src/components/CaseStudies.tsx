@@ -1,22 +1,22 @@
 const CaseStudies = () => {
   const cases = [
     {
-      title: "Industrial AI",
+      title: "Real-Time Fraud Detection",
       image: "/images/industrial-ai.jpg",
-      problem: "Unplanned downtime on critical assets",
-      solution: "Edge model for anomaly detection",
-      pilot: "30-day data ingest; success = 15% false-positive reduction",
-      outcome: "21% reduction; extended to 3 plants with paid MSA",
-      next: "Multi-year rollout plan signed",
+      problem: "Growing fraud losses and false positives impacting customer experience",
+      solution: "ML-powered real-time transaction monitoring with behavioral analytics",
+      pilot: "90-day integration with payment gateway; success = 40% fraud detection improvement",
+      outcome: "47% fraud reduction, 35% fewer false positives; enterprise license signed",
+      next: "Multi-market expansion with cross-border payment integration",
     },
     {
-      title: "Customer Ops Automation",
+      title: "AI-Powered Credit Risk Assessment",
       image: "/images/customer-ops.jpg",
-      problem: "High handle times in service center",
-      solution: "LLM-assisted agent copilot with retrieval-augmented knowledge",
-      pilot: "Sandbox integration; success = AHT −20%",
-      outcome: "−24% AHT; purchase order issued for BU-wide deployment",
-      next: "Full production deployment across 3 regions",
+      problem: "Manual underwriting bottlenecks and limited data utilization",
+      solution: "Alternative data scoring model with explainable AI for regulatory compliance",
+      pilot: "Pilot with 10K loan applications; success = 30% faster decisions",
+      outcome: "42% reduction in processing time, 18% improved approval accuracy; production rollout approved",
+      next: "Integration with core banking system across all business units",
     },
   ];
 
