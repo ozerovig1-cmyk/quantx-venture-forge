@@ -33,6 +33,9 @@ All colors MUST be HSL.
     --teal: 174 29% 52%; /* #64a498 - Teal green */
     --teal-foreground: 0 0% 100%;
 
+    --brand: 21 29% 52%; /* #a47864 - Warm brown brand color */
+    --brand-foreground: 0 0% 100%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
@@ -81,6 +84,9 @@ All colors MUST be HSL.
 
     --teal: 174 29% 52%;
     --teal-foreground: 0 0% 100%;
+
+    --brand: 21 29% 52%;
+    --brand-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
