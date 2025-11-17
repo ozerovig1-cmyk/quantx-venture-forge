@@ -22,10 +22,10 @@ const Hero = () => {
               Apply as Startup
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base text-accent border-white">
+            <Button size="lg" onClick={() => scrollToApply("corporate")} variant="outline" className="bg-white hover:bg-white/90 hover:text-accent font-semibold shadow-xl text-base text-accent border-white">
               Partner as Corporate
             </Button>
-            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="bg-white hover:bg-white/90 font-semibold shadow-xl text-base text-accent border-white">
+            <Button size="lg" onClick={() => scrollToApply("investor")} variant="outline" className="bg-white hover:bg-white/90 hover:text-accent font-semibold shadow-xl text-base text-accent border-white">
               Invest with Us
             </Button>
           </div>
